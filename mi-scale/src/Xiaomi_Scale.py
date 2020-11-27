@@ -277,18 +277,18 @@ class ScanProcessor():
         message += '"weight":' + "{:.2f}".format(weight)
         message += ',"weight_unit":"' + str(unit) + '"'
         message += ',"bmi":' + "{:.2f}".format(lib.getBMI())
-        message += ',"basal_metabolism":' + "{:.2f kcal}".format(lib.getBMR())
+        message += ',"basal_metabolism":' + "{:.2f} kcal".format(lib.getBMR())
         message += ',"visceral_fat":' + "{:.2f}".format(lib.getVisceralFat())
 
         if hasImpedance:
             lib = Xiaomi_Scale_Body_Metrics.bodyMetrics(calcweight, height, age, sex, int(miimpedance))
             bodyscale = ['Obese', 'Overweight', 'Thick-set', 'Lack-exercise', 'Balanced', 'Balanced-muscular', 'Skinny', 'Balanced-skinny', 'Skinny-muscular']
-            message += ',"lean_body_mass":' + "{:.2f %}".format(lib.getLBMCoefficient())
-            message += ',"body_fat":' + "{:.2f %}".format(lib.getFatPercentage())
-            message += ',"water":' + "{:.2f %}".format(lib.getWaterPercentage())
-            message += ',"bone_mass":' + "{:.2f kg}".format(lib.getBoneMass())
-            message += ',"muscle_mass":' + "{:.2f kg}".format(lib.getMuscleMass())
-            message += ',"protein":' + "{:.2f %}".format(lib.getProteinPercentage())
+            message += ',"lean_body_mass":' + "{:.2f} %".format(lib.getLBMCoefficient())
+            message += ',"body_fat":' + "{:.2f} %".format(lib.getFatPercentage())
+            message += ',"water":' + "{:.2f} %".format(lib.getWaterPercentage())
+            message += ',"bone_mass":' + "{:.2f} kg".format(lib.getBoneMass())
+            message += ',"muscle_mass":' + "{:.2f} kg".format(lib.getMuscleMass())
+            message += ',"protein":' + "{:.2f} %".format(lib.getProteinPercentage())
             message += ',"body_type":"' + str(bodyscale[lib.getBodyType()]) + '"'
             message += ',"metabolic_age":' + "{:.0f}".format(lib.getMetabolicAge())
 
