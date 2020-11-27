@@ -1,4 +1,4 @@
-## [0.1.19] - 2020-11-27
+## [0.2.0] - 2020-11-27
 Add Multi User
 ### Changed
 - fork from (fixes https://github.com/lolouk44/hassio-addons/issues/23)
