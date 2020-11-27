@@ -130,7 +130,6 @@ def discovery():
         message = '{"name": "' + MQTTUser.NAME + ' Weight",'
         message+= '"state_topic": "miscale/' + MQTTUser.NAME + '/weight","value_template": "{{ value_json.weight }}","unit_of_measurement": "kg",'
         message+= '"json_attributes_topic": "miscale/' + MQTTUser.NAME + '/weight","icon": "mdi:scale-bathroom"}'
-    for MQTTUser in (USER1_NAME,USER2_NAME,USER3_NAME):
         publish.single(
                         MQTT_DISCOVERY_PREFIX + '/sensor/' + MQTT_PREFIX + '/' + MQTTUser.NAME + '/config',
                         message,
